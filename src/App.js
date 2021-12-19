@@ -1,13 +1,13 @@
 import './App.css';
-import Button from './components/UI/button';
 import Main from './layouts/main';
 import MainNavbar from './layouts/navbar/main-navbar';
+import Home from './pages/home';
 
 function App() {
   return (
     <div className='App drop-shadow-xl'>
       <Main>
-        <Button>Click</Button>
+        <Home />
       </Main>
       <MainNavbar />
     </div>
