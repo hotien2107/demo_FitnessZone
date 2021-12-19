@@ -1,7 +1,7 @@
 import './App.css';
 import Button from './components/UI/button';
 import Main from './layouts/main';
-import Navbar from './layouts/navbar';
+import MainNavbar from './layouts/navbar/main-navbar';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Main>
         <Button>Click</Button>
       </Main>
-      <Navbar />
+      <MainNavbar />
     </div>
   );
 }
