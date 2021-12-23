@@ -5,8 +5,8 @@ const defaultSrc =
 
 const ThumbnailSmall = ({ src }) => {
   return (
-    <div className='w-40 h-40 bg-white shadow-xl rounded-2xl overflow-hidden scroll-mx-0.5'>
-      <img src={src ? src : defaultSrc} alt='#' />
+    <div className='w-40 h-40 bg-white shadow-xl rounded-2xl overflow-hidden'>
+      <img className="w-full h-full object-cover" src={src ? src : defaultSrc} alt='#' />
     </div>
   );
 };
