@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '..';
-import DumbbellIcon from '../../../components/UI/icons/DumbbellIcon';
-import FriendIcon from '../../../components/UI/icons/FriendIcon';
-import HomeIcon from '../../../components/UI/icons/HomeIcon';
-import UserIcon from '../../../components/UI/icons/UserIcon';
-import UtensilsIcon from '../../../components/UI/icons/UtensilsIcon';
+import DumbbellIcon from '../../../components/UI/icons/navbar-icons/DumbbellIcon';
+import HomeIcon from '../../../components/UI/icons/navbar-icons/HomeIcon';
+import UtensilsIcon from '../../../components/UI/icons/navbar-icons/UtensilsIcon';
+import FriendIcon from '../../../components/UI/icons/navbar-icons/FriendIcon';
+import UserIcon from '../../../components/UI/icons/navbar-icons/UserIcon';
+
 
 const MainNavbar = () => {
   return (
