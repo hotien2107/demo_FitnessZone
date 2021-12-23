@@ -6,7 +6,6 @@ import UtensilsIcon from '../../../components/UI/icons/navbar-icons/UtensilsIcon
 import FriendIcon from '../../../components/UI/icons/navbar-icons/FriendIcon';
 import UserIcon from '../../../components/UI/icons/navbar-icons/UserIcon';
 
-
 const MainNavbar = () => {
   return (
     <Navbar>
