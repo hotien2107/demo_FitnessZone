@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaBell, FaCrown, FaShoePrints } from 'react-icons/fa';
+import { FaBell, FaBolt, FaCrown, FaFire, FaHeart, FaShoePrints } from 'react-icons/fa';
 
 const HomeHeader = () => {
   return (
     <header className='h-1/4 bg-gradient-to-br from-green-600 to-green-400 rounded-2xl px-12 py-4'>
-      {/* date and notification */}
+      {/* date and notification start*/}
       <div className='flex justify-between'>
         <div>
           <p className='text-2xl font-thin text-white mb-4'>Ngày 5 tháng 12 năm 2021</p>
@@ -15,7 +15,53 @@ const HomeHeader = () => {
         </div>
         <FaBell className='text-6xl text-white ' />
       </div>
-      <FaShoePrints className='text-4xl text-white ' />
+      {/* date and notification end*/}
+      <div className='w-full h-48 bg-white rounded-2xl mt-8 flex justify-around items-center'>
+        {/* health item start */}
+        <div className='flex flex-col items-center text-center'>
+          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+            <FaShoePrints className='text-4xl text-white' />
+          </div>
+          <div>
+            <p className='text-2xl font-bold text-gray-900'>1200</p>
+            <span className='text-xl font-thin text-gray-400'>Bước</span>
+          </div>
+        </div>
+        {/* health item end */}
+        {/* health item start */}
+        <div className='flex flex-col items-center text-center'>
+          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+            <FaHeart className='text-4xl text-white' />
+          </div>
+          <div>
+            <p className='text-2xl font-bold text-gray-900'>80</p>
+            <span className='text-xl font-thin text-gray-400'>Nhịp/phút</span>
+          </div>
+        </div>
+        {/* health item end */}
+        {/* health item start */}
+        <div className='flex flex-col items-center text-center'>
+          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+            <FaBolt className='text-4xl text-white' />
+          </div>
+          <div>
+            <p className='text-2xl font-bold text-gray-900'>350</p>
+            <span className='text-xl font-thin text-gray-400'>Calo</span>
+          </div>
+        </div>
+        {/* health item end */}
+        {/* health item start */}
+        <div className='flex flex-col items-center text-center'>
+          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+            <FaFire className='text-4xl text-white' />
+          </div>
+          <div>
+            <p className='text-2xl font-bold text-gray-900'>250</p>
+            <span className='text-xl font-thin text-gray-400'>Calo</span>
+          </div>
+        </div>
+        {/* health item end */}
+      </div>
     </header>
   );
 };
