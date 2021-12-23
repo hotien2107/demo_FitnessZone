@@ -6,7 +6,7 @@ import ListFriends from './pages/list-friends';
 
 function App() {
   return (
-    <div className='App drop-shadow-xl'>
+    <div className='App drop-shadow-xl '>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/list-friends' element={<ListFriends />} />
