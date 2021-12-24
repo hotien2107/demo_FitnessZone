@@ -9,7 +9,7 @@ const ListFriends = () => {
     <>
       <CommonHeader className='flex items-center'>
         <FaSearch className='text-5xl text-white mr-8' />
-        <InputText placeholder='Tìm kiếm bạn bè' />
+        <InputText placeholder='Tìm kiếm bạn bè' isWhite/>
         <FaPlus className='text-5xl text-white ml-8' />
       </CommonHeader>
       <Main>

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const ListFriendsItem = ({ src, name, lastMess, lastTime, unreadMess, friendId }) => {
   const navigate = useNavigate();
   return (
-    <div className='flex cursor-pointer justify-between my-8' onClick={() => navigate(friendId, { state: { friendId: friendId } })}>
+    <div className='flex cursor-pointer justify-between my-8' onClick={() => navigate('chat/' + friendId, { state: { friendId: friendId } })}>
       <img
         src={src ?? 'https://ecdn.game4v.com/g4v-content/uploads/2021/11/12062838/S0-1636673317-14.jpg'}
         alt=''

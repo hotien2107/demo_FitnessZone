@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowLeft, FaInfoCircle, FaPhone, FaVideo } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ChatBar from '../../components/chat-bar';
 import ChatItem from '../../components/chat-item/ChatItem';
 import { list_friend } from '../../dummy-data/friends';
 import CommonHeader from '../../layouts/header/CommonHeader';
@@ -26,12 +27,13 @@ const Chat = ({ lastOnl }) => {
         <FaInfoCircle className='text-5xl text-white ml-8' />
       </CommonHeader>
       <Main>
-        <section className="flex flex-col">
+        <section className='flex flex-col'>
           <ChatItem isMe>Bài tập hôm nay khó quá</ChatItem>
           <ChatItem friendId={friendId}>Không sao, ngoài khơi có nhiều chỗ luyện tập hơn</ChatItem>
           <ChatItem friendId={friendId}>Chuẩn bị ra khơi nào</ChatItem>
         </section>
       </Main>
+      <ChatBar />
     </>
   );
 };
