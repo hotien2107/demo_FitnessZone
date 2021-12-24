@@ -19,7 +19,7 @@ const HomeHeader = () => {
       <div className='w-full h-48 bg-white rounded-2xl mt-8 flex justify-around items-center'>
         {/* health item start */}
         <div className='flex flex-col items-center text-center'>
-          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+          <div className='bg-yellow-500 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
             <FaShoePrints className='text-4xl text-white' />
           </div>
           <div>
@@ -30,7 +30,7 @@ const HomeHeader = () => {
         {/* health item end */}
         {/* health item start */}
         <div className='flex flex-col items-center text-center'>
-          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+          <div className='bg-pink-500 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
             <FaHeart className='text-4xl text-white' />
           </div>
           <div>
@@ -41,7 +41,7 @@ const HomeHeader = () => {
         {/* health item end */}
         {/* health item start */}
         <div className='flex flex-col items-center text-center'>
-          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+          <div className='bg-blue-500 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
             <FaBolt className='text-4xl text-white' />
           </div>
           <div>
@@ -52,7 +52,7 @@ const HomeHeader = () => {
         {/* health item end */}
         {/* health item start */}
         <div className='flex flex-col items-center text-center'>
-          <div className='bg-green-400 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
+          <div className='bg-red-500 w-16 h-16 flex justify-center items-center rounded-2xl mb-4'>
             <FaFire className='text-4xl text-white' />
           </div>
           <div>

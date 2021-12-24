@@ -26,7 +26,7 @@ const Home = () => {
             <h3 className='text-4xl text-gray-900 font-bold my-4'>Bài tập hôm nay</h3>
             <div className='flex justify-between'>
               <ThumbnailSmall />
-              <ThumbnailSmall />
+              <ThumbnailSmall hasTrainer/>
               <ThumbnailSmall />
             </div>
           </div>
