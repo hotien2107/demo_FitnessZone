@@ -20,6 +20,7 @@ const ListFriends = () => {
             lastMess='Chuẩn bị ra khơi nào'
             lastTime='Hôm qua'
             unreadMess='3'
+            friendId='1'
           />
           <ListFriendsItem
             src='https://omnitos.com/wp-content/uploads/2021/09/one-piece-roronoa-zoro-hd-wallpaper-preview.jpg'
@@ -27,6 +28,7 @@ const ListFriends = () => {
             lastMess='Thuyền chúng ta ở đâu'
             lastTime='Hôm qua'
             unreadMess='2'
+            friendId='2'
           />
           <ListFriendsItem
             src='https://i.pinimg.com/736x/25/9c/ee/259ceef3e461312d662decc8633b7b64.jpg'
@@ -34,6 +36,7 @@ const ListFriends = () => {
             lastMess='Ngay kia'
             lastTime='5h'
             unreadMess='10'
+            friendId='3'
           />
         </section>
       </Main>

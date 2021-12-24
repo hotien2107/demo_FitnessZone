@@ -7,7 +7,7 @@ const HomeHeader = () => {
       {/* date and notification start*/}
       <div className='flex justify-between'>
         <div>
-          <p className='text-2xl font-thin text-white mb-4'>Ngày 5 tháng 12 năm 2021</p>
+          <p className='text-2xl font-light text-white mb-4'>Ngày 5 tháng 12 năm 2021</p>
           <div className='flex align-middle'>
             <span className='text-4xl font-semibold text-white mr-4'>Chào, Tủn</span>
             <FaCrown className='text-4xl text-white ' />
@@ -24,7 +24,7 @@ const HomeHeader = () => {
           </div>
           <div>
             <p className='text-2xl font-bold text-gray-900'>1200</p>
-            <span className='text-xl font-thin text-gray-400'>Bước</span>
+            <span className='text-xl font-light text-gray-400'>Bước</span>
           </div>
         </div>
         {/* health item end */}
@@ -35,7 +35,7 @@ const HomeHeader = () => {
           </div>
           <div>
             <p className='text-2xl font-bold text-gray-900'>80</p>
-            <span className='text-xl font-thin text-gray-400'>Nhịp/phút</span>
+            <span className='text-xl font-light text-gray-400'>Nhịp/phút</span>
           </div>
         </div>
         {/* health item end */}
@@ -46,7 +46,7 @@ const HomeHeader = () => {
           </div>
           <div>
             <p className='text-2xl font-bold text-gray-900'>350</p>
-            <span className='text-xl font-thin text-gray-400'>Calo</span>
+            <span className='text-xl font-light text-gray-400'>Calo</span>
           </div>
         </div>
         {/* health item end */}
@@ -57,7 +57,7 @@ const HomeHeader = () => {
           </div>
           <div>
             <p className='text-2xl font-bold text-gray-900'>250</p>
-            <span className='text-xl font-thin text-gray-400'>Calo</span>
+            <span className='text-xl font-light text-gray-400'>Calo</span>
           </div>
         </div>
         {/* health item end */}
