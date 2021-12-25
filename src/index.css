@@ -17,3 +17,11 @@ body {
 * {
   font-size: 62.5%;
 }
+
+input:checked + div {
+  @apply border-green-500;
+  @apply bg-green-500;
+}
+input:checked + div svg {
+  @apply block;
+}
