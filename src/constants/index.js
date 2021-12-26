@@ -5,6 +5,11 @@ export const MAIN_ROUTES = {
 };
 
 export const DETAIL_MAIN_ROUTES = {
-  HOME: '/',
-  FRIENDS: { INDEX: 'list-friends', CHAT: 'list-friends/chat' },
+  HOME: "/",
+  FRIENDS: { INDEX: "list-friends", CHAT: "list-friends/chat" },
+};
+
+export const VIDEO_CALL_ROUTES = {
+  HOME: "videoCall",
+  CHILD: { VIDEO: ":callId", EXERCISE: ":callId/exercises" },
 };
