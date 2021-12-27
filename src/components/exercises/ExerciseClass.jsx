@@ -5,9 +5,11 @@ import Main from "../../layouts/main";
 import TrainerAvatar from "../UI/avatar/TrainerAvatar";
 import Button from "../UI/button/index";
 import {Link, useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 
 const ExerciseClass = () => {
+    const [rating, setRating] = useState(-1);
     const data = trainer_exercise_info;
     const navigate = useNavigate();
 
@@ -84,7 +86,13 @@ const ExerciseClass = () => {
                     <div>
                         <h3 className='text-4xl text-gray-900 font-bold my-4'>Rate</h3>
                         <div className='flex w-full justify-between'>
-                            {Array(5).fill(<FaRegStar className='text-amber-500 text-6xl'/>)}
+                            {[...Array(5)].map((element, index) => (
+                                <div key={index} onClick={() => setRating(index)}>
+                                    {rating >= index ? <FaStar className='text-amber-500 text-6xl'/> :
+                                        <FaRegStar className='text-amber-500 text-6xl'/>}
+                                </div>
+                            ))
+                            }
                         </div>
                     </div>
                 </section>
