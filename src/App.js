@@ -13,7 +13,6 @@ import Chat from "./pages/chat";
 import Home from "./pages/home";
 import ListFriends from "./pages/list-friends";
 import InviteVideoCall from "./pages/invite-video-call";
-import ListFriendMenu from "./pages/list-friend-menu";
 import { VideoCallLayout } from "./layouts/VideoCallLayout";
 import { VideoCall } from "./pages/VideoCall";
 import { VideoCallExercise } from "./pages/VideoCallExercise";
@@ -35,10 +34,6 @@ function App() {
         <Route path={MAIN_ROUTES.FRIENDS.INDEX}>
           <Route index element={<ListFriends />} />
           <Route path={MAIN_ROUTES.FRIENDS.CHAT} element={<Chat />} />
-          <Route
-            path={MAIN_ROUTES.FRIENDS.CHATMENU}
-            element={<ListFriendMenu />}
-          />
           <Route
             path={MAIN_ROUTES.FRIENDS.INVITE}
             element={<InviteVideoCall />}
