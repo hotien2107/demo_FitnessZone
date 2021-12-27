@@ -23,7 +23,9 @@ const Chat = ({ lastOnl }) => {
           <p className='text-2xl text-white font-light'>{lastOnl ?? '2 giờ trước'}</p>
         </div>
         <FaPhone className='text-5xl text-white ml-8' />
-        <FaVideo className='text-5xl text-white ml-8' />
+        <FaVideo className='text-5xl text-white ml-8' 
+          //navigate('videoCall/' + friendId, { state: { friendId: friendId }
+          onClick={() => navigate('/videoCall/callId')}/>
         <FaInfoCircle className='text-5xl text-white ml-8' />
       </CommonHeader>
       <Main>
