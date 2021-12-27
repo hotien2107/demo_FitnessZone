@@ -1,16 +1,16 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-
-import { DETAIL_MAIN_ROUTES, MAIN_ROUTES, VIDEO_CALL, VIDEO_CALL_ROUTES } from './constants';
-
+import { DETAIL_MAIN_ROUTES, MAIN_ROUTES, VIDEO_CALL_ROUTES } from './constants';
 import MainNavbar from './layouts/navbar/main-navbar';
+import { VideoCallLayout } from './layouts/VideoCallLayout';
 import Chat from './pages/chat';
 import Home from './pages/home';
-import ListFriends from './pages/list-friends';
 import InviteVideoCall from './pages/invite-video-call';
-import { VideoCallLayout } from './layouts/VideoCallLayout';
+import ListFriends from './pages/list-friends';
 import { VideoCall } from './pages/VideoCall';
 import { VideoCallExercise } from './pages/VideoCallExercise';
+
+
 
 const isIn = (str1, str2) => {
   return str1.indexOf(str2) >= 0;
