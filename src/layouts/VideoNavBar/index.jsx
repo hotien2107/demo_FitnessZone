@@ -14,7 +14,7 @@ import Navbar from "../navbar";
 import { Toggle, ToggleOff, ToggleOn } from "./components/Toggle";
 import { VideoNavBarIcon } from "./components/VideoNavBarIcon";
 
-export const VideoNavBar = () => {
+export const VideoNavBar = ({withTrainer}) => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -104,25 +104,27 @@ export const VideoNavBar = () => {
           <FaChromecast />
         </VideoNavBarIcon>
 
-        {workoutVisible ? (
-          <VideoNavBarIcon
-            className="rounded-full"
-            type="green"
-            onClick={handleListWorkoutClick}
-          >
-            <FaList />
-          </VideoNavBarIcon>
-        ) : (
-          <VideoNavBarIcon onClick={handleListWorkoutClick}>
-            <FaList />
-          </VideoNavBarIcon>
-        )}
+        {!withTrainer && (
+          workoutVisible ? (
+              <VideoNavBarIcon
+                  className="rounded-full"
+                  type="green"
+                  onClick={handleListWorkoutClick}
+              >
+                <FaList/>
+              </VideoNavBarIcon>
+          ) : (
+              <VideoNavBarIcon onClick={handleListWorkoutClick}>
+                <FaList/>
+              </VideoNavBarIcon>
+          ))}
 
+        {!withTrainer &&
         <Link to="/list-friends">
           <VideoNavBarIcon className="rounded-full">
-            <FaPlus />
+            <FaPlus/>
           </VideoNavBarIcon>
-        </Link>
+        </Link>}
 
         <VideoNavBarIcon
           type="red"

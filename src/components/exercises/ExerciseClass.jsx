@@ -4,7 +4,7 @@ import {trainer_exercise_info} from "../../dummy-data/trainerExercise";
 import Main from "../../layouts/main";
 import TrainerAvatar from "../UI/avatar/TrainerAvatar";
 import Button from "../UI/button/index";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 const ExerciseClass = () => {
@@ -30,14 +30,18 @@ const ExerciseClass = () => {
                         <p className="text-3xl font-black mt-4">{data.trainer.name}</p>
                     </div>
                     <div className='flex gap-16 justify-center mb-12'>
-                        <Button className="w-32 h-32 bg-none flex flex-col items-center">
-                            <FaComment className='text-green-500 text-6xl'/>
-                            <p className="text-2xl text-gray-900">Chat</p>
-                        </Button>
-                        <Button className="w-32 h-32 bg-none flex flex-col items-center">
-                            <FaDumbbell className='text-green-500 text-6xl'/>
-                            <p className="text-2xl text-gray-900">Tập ngay</p>
-                        </Button>
+                        <Link to={''}>
+                            <div className="w-32 h-full bg-none flex flex-col items-center">
+                                <FaComment className='text-green-500 text-6xl'/>
+                                <p className="text-2xl text-gray-900">Chat</p>
+                            </div>
+                        </Link>
+                        <Link to={'videoCall'}>
+                            <div className="w-32 h-full bg-none flex flex-col items-center">
+                                <FaDumbbell className='text-green-500 text-6xl'/>
+                                <p className="text-2xl text-gray-900">Tập ngay</p>
+                            </div>
+                        </Link>
                     </div>
                     <div className='grid grid-flow-row gap-y-5 grid-cols-3 mb-12'>
                         <h4 className='text-2xl text-gray-500'>Thời lượng</h4>
@@ -79,6 +83,9 @@ const ExerciseClass = () => {
                     </div>
                     <div>
                         <h3 className='text-4xl text-gray-900 font-bold my-4'>Rate</h3>
+                        <div className='flex w-full justify-between'>
+                            {Array(5).fill(<FaRegStar className='text-amber-500 text-6xl'/>)}
+                        </div>
                     </div>
                 </section>
             </Main>

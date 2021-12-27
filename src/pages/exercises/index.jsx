@@ -19,7 +19,7 @@ const Exercises = () => {
                 <section className="mt-8">
                     <div className='mb-12'>
                         <h3 className='text-4xl text-gray-900 font-bold my-4'>Bài tập của bạn</h3>
-                        <div className="flex justify-between gap-5">
+                        <div className="flex justify-between">
                             <Link to={`trainer-exercise`}>
                                 <ThumbnailBig hasTrainer />
                             </Link>

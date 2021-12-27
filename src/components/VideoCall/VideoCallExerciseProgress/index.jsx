@@ -12,6 +12,7 @@ export const VideoCallExerciseProgress = ({
   onPrevClick,
   currentExercise,
   nextExercise,
+  withTrainer,
   ...rest
 }) => {
   const { title: currTitle, quantity: currQuantity } = currentExercise;
@@ -21,20 +22,21 @@ export const VideoCallExerciseProgress = ({
       <div className="mt-10 text-4xl font-bold">{currTitle}</div>
       <div className="mt-3 font-black text-8xl">x{currQuantity}</div>
 
+      {!withTrainer &&
       <div className="flex flex-row items-center gap-10 mt-7">
-        <BsFillCaretLeftFill className="cursor-pointer" size={30} />
+        <BsFillCaretLeftFill className="cursor-pointer" size={30}/>
         <div
-          className="text-green-500 rounded-full cursor-pointer w-28 h-28"
-          onClick={onTogglePlaying}
+            className="text-green-500 rounded-full cursor-pointer w-28 h-28"
+            onClick={onTogglePlaying}
         >
           {playing ? (
-            <BsFillPlayCircleFill className="w-full h-full" />
+              <BsFillPlayCircleFill className="w-full h-full"/>
           ) : (
-            <BsFillPauseCircleFill className="w-full h-full" />
+              <BsFillPauseCircleFill className="w-full h-full"/>
           )}
         </div>
-        <BsFillCaretRightFill className="cursor-pointer " size={30} />
-      </div>
+        <BsFillCaretRightFill className="cursor-pointer " size={30}/>
+      </div>}
 
       {nextExercise && (
         <div aria-label="next-Exercise" className="mt-12 text-3xl">

@@ -6,7 +6,7 @@ const defaultSrc =
 
 const ThumbnailBig = ({ src, hasTrainer }) => {
   return (
-    <div className='w-80 h-96 bg-white shadow-xl rounded-2xl overflow-hidden scroll-mx-0.5 p-4 cursor-pointer relative'>
+    <div className='w-72 h-96 bg-white shadow-xl rounded-2xl overflow-hidden scroll-mx-0.5 p-4 cursor-pointer relative'>
       {hasTrainer ? (
         <div className='p-2 bg-white shadow-lg absolute top-4 right-4 rounded-full '>
           <FaUserGraduate className='text-2xl text-gray-800' />
