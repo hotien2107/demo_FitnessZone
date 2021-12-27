@@ -10,5 +10,5 @@ export const DETAIL_MAIN_ROUTES = {
 
 export const VIDEO_CALL_ROUTES = {
   HOME: "videoCall",
-  CHILD: { VIDEO: ":callId", EXERCISE: ":callId/exercises" },
+  CHILD: { VIDEO: ":callId", EXERCISE: ":callId/:workoutId" },
 };

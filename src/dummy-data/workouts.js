@@ -1,3 +1,15 @@
+export const fakeCalls = {
+  1: {
+    participants: [2],
+    userCreated: 1,
+  },
+
+  2: {
+    participants: [1, 2],
+    userCreated: 3,
+  },
+};
+
 export const fakeExercises = {
   1: {
     id: "1",

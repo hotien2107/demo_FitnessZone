@@ -40,6 +40,8 @@ export const VideoNavBar = () => {
 
     if (screenCast === "true") setScreenCast(true);
     if (screenCast === "false") setScreenCast(false);
+
+    //react-hooks\exhaustive-deps
   }, []);
 
   useEffect(() => {

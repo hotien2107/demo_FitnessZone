@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BsFillCaretLeftFill,
   BsFillCaretRightFill,
@@ -8,13 +9,25 @@ import {
 export const VideoCallExerciseProgress = ({
   playing,
   onTogglePlaying,
-  onNextClick,
-  onPrevClick,
-  currentExercise,
-  nextExercise,
+  exercises,
   ...rest
 }) => {
-  const { title: currTitle, quantity: currQuantity } = currentExercise;
+  const [nextExercise, setNextExercise] = useState(null);
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+
+  const handleNextClick = () => {
+    if (currentExerciseIndex >= exercises.length - 1) return;
+    setCurrentExerciseIndex((prev) => prev + 1);
+  };
+
+  const handlePrevClick = () => {
+    if (currentExerciseIndex <= 0) return;
+    setCurrentExerciseIndex((prev) => prev - 1);
+  };
+
+  const { title: currTitle, quantity: currQuantity } = exercises[
+    currentExerciseIndex
+  ] ?? { title: "", quantity: "" };
 
   return (
     <div aria-label="aaaa" className="flex flex-col items-center" {...rest}>
@@ -22,7 +35,12 @@ export const VideoCallExerciseProgress = ({
       <div className="mt-3 font-black text-8xl">x{currQuantity}</div>
 
       <div className="flex flex-row items-center gap-10 mt-7">
-        <BsFillCaretLeftFill className="cursor-pointer" size={30} />
+        <BsFillCaretLeftFill
+          onClick={handlePrevClick}
+          className="cursor-pointer"
+          size={30}
+        />
+
         <div
           className="text-green-500 rounded-full cursor-pointer w-28 h-28"
           onClick={onTogglePlaying}
@@ -33,7 +51,11 @@ export const VideoCallExerciseProgress = ({
             <BsFillPauseCircleFill className="w-full h-full" />
           )}
         </div>
-        <BsFillCaretRightFill className="cursor-pointer " size={30} />
+        <BsFillCaretRightFill
+          onClick={handleNextClick}
+          className="cursor-pointer "
+          size={30}
+        />
       </div>
 
       {nextExercise && (

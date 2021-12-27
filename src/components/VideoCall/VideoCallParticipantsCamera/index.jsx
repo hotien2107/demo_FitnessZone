@@ -5,7 +5,7 @@ import React from "react";
 export const VideoCallSmallCamera = ({ img, className, ...rest }) => {
   return (
     <img
-      className={`object-cover rounded-sm ${className}`}
+      className={`object-cover w-36 h-52 rounded-xl ${className}`}
       src={img}
       {...rest}
     />
@@ -17,24 +17,35 @@ export const VideoCallParticipantsCamera = ({
   children,
   ...rest
 }) => {
-  const clazz =
-    children.length > 1
-      ? "flex flex-row gap-5 justify-center align-center items-center"
-      : "flex justify-end";
+  const isPrivateCall = children.length === 1;
+  const clazz = isPrivateCall
+    ? "flex justify-end mr-5 rounded-xl"
+    : "flex flex-row gap-5 justify-center align-center items-center";
 
-  return (
-    <div className={`${clazz} ${className}`} {...rest}>
-      <BsFillCaretLeftFill
-        className="p-2 bg-white rounded-full cursor-pointer"
-        size={30}
-      />
+  const renderPrivateCall = () => {
+    return (
+      <div className={`${clazz} ${className}`} {...rest}>
+        {children}
+      </div>
+    );
+  };
 
-      {React.Children.map(children, (child) => React.cloneElement(child))}
+  const renderGroupCall = () => {
+    return (
+      <div className={`${clazz} ${className}`} {...rest}>
+        <BsFillCaretLeftFill
+          className="p-2 bg-white rounded-full cursor-pointer"
+          size={30}
+        />
 
-      <BsFillCaretRightFill
-        className="p-2 bg-white rounded-full cursor-pointer"
-        size={30}
-      />
-    </div>
-  );
+        {React.Children.map(children, (child) => React.cloneElement(child))}
+
+        <BsFillCaretRightFill
+          className="p-2 bg-white rounded-full cursor-pointer"
+          size={30}
+        />
+      </div>
+    );
+  };
+  return isPrivateCall ? renderPrivateCall() : renderGroupCall();
 };

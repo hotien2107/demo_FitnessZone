@@ -3,16 +3,19 @@ import {
   VideoCallSmallCamera,
 } from "../VideoCallParticipantsCamera";
 
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import {
-  VideoCallWorkout,
-  VideoCallPickWorkouts,
-} from "../VideoCallPickExercises";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { VideoCallPickWorkouts } from "../VideoCallPickExercises";
 import { useEffect, useState } from "react";
+import { fakeCalls } from "../../../dummy-data/workouts";
+import { list_friend } from "../../../dummy-data/friends";
 
 export const VideoCallInCamera = ({ className, ...rest }) => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const { callId } = useParams();
+
+  const [participants, setParticipants] = useState([]);
+  const [userCreated, setUserCreated] = useState(null);
   const [listWorkoutVisible, setListWorkoutVisible] = useState(null);
 
   useEffect(() => {
@@ -21,8 +24,21 @@ export const VideoCallInCamera = ({ className, ...rest }) => {
     if (visible === "false") setListWorkoutVisible(false);
   }, [searchParams]);
 
+  useEffect(() => {
+    const fakeCall = fakeCalls[callId];
+
+    const participantIds = fakeCall.participants;
+    const userCreatedId = fakeCall.userCreated;
+
+    const participants = participantIds.map((id) => list_friend[id]);
+    const userCreated = list_friend[userCreatedId];
+
+    setParticipants(participants);
+    setUserCreated(userCreated);
+  }, [callId]);
+
   const handleWorkoutClick = (id) => {
-    navigate(`exercises?${searchParams}&workoutId=${id}`);
+    navigate(`${id}?${searchParams}`);
   };
 
   return (
@@ -33,14 +49,9 @@ export const VideoCallInCamera = ({ className, ...rest }) => {
       />
       <div className="relative z-10">
         <VideoCallParticipantsCamera className="mt-5">
-          <VideoCallSmallCamera
-            className="h-36 w-28"
-            img="/img/userParticipant.png"
-          />
-          <VideoCallSmallCamera
-            className="h-36 w-28"
-            img="/img/userParticipant.png"
-          />
+          {participants.map((p) => (
+            <VideoCallSmallCamera className="h-36 w-28" img={p.image} />
+          ))}
         </VideoCallParticipantsCamera>
       </div>
 
