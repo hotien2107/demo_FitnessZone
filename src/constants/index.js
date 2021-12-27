@@ -1,6 +1,8 @@
 export const MAIN_ROUTES = {
   HOME: "",
   FRIENDS: { INDEX: "list-friends", CHAT: "chat/:friendId",CHATMENU: 'menu', INVITE: 'menu/invite' },
+  EXERCISES: { INDEX: 'exercises', TRAINER_CLASS: 'trainer-exercise'},
+  TRAINERS: { INDEX: 'trainers'}
 };
 
 export const DETAIL_MAIN_ROUTES = {
