@@ -8,7 +8,6 @@ import Chat from './pages/chat';
 import Home from './pages/home';
 import ListFriends from './pages/list-friends';
 import InviteVideoCall from './pages/invite-video-call';
-import ListFriendMenu from './pages/list-friend-menu';
 import { VideoCallLayout } from './layouts/VideoCallLayout';
 import { VideoCall } from './pages/VideoCall';
 import { VideoCallExercise } from './pages/VideoCallExercise';
@@ -22,6 +21,7 @@ function App() {
   const currPath = location.pathname.substring(1);
 
   const isChat = isIn(currPath, DETAIL_MAIN_ROUTES.FRIENDS.CHAT);
+  const isCall = isIn(currPath, VIDEO_CALL_ROUTES.INDEX);
 
   return (
     <div className='App drop-shadow-xl '>
@@ -30,15 +30,14 @@ function App() {
         <Route path={MAIN_ROUTES.FRIENDS.INDEX}>
           <Route index element={<ListFriends />} />
           <Route path={MAIN_ROUTES.FRIENDS.CHAT} element={<Chat />} />
-          <Route path={MAIN_ROUTES.FRIENDS.CHATMENU} element={<ListFriendMenu />} />
           <Route path={MAIN_ROUTES.FRIENDS.INVITE} element={<InviteVideoCall />} />
         </Route>
-        <Route path={VIDEO_CALL_ROUTES.HOME} element={<VideoCallLayout />}>
+        <Route path={VIDEO_CALL_ROUTES.INDEX} element={<VideoCallLayout />}>
           <Route path={VIDEO_CALL_ROUTES.CHILD.VIDEO} element={<VideoCall />} />
           <Route path={VIDEO_CALL_ROUTES.CHILD.EXERCISE} element={<VideoCallExercise />} />
         </Route>
       </Routes>
-      {isChat ? '' : <MainNavbar />}
+      {isChat || isCall ? '' : <MainNavbar />}
     </div>
   );
 }

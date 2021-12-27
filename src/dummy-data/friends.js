@@ -10,11 +10,11 @@ export const list_friend = [
   {
     id: '2',
     name: 'Roronoa Zoro',
-    image: pic2,
+    image: pic3,
   },
   {
     id: '3',
     name: 'Usopp',
-    image: pic3,
+    image: pic2,
   },
 ];

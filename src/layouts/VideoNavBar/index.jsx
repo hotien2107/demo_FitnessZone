@@ -120,7 +120,7 @@ export const VideoNavBar = () => {
           </VideoNavBarIcon>
         )}
 
-        <Link to="/list-friends">
+        <Link to="/list-friends/invite">
           <VideoNavBarIcon className="rounded-full">
             <FaPlus />
           </VideoNavBarIcon>

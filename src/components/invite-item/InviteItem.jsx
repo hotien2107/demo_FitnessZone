@@ -1,7 +1,7 @@
 const InviteItem = ({ src, name, lastMess }) => {
   return (
-    <div className="flex items-center cursor-pointer justify-between my-8">
-      <label for={src} className="flex select-none">
+    <div className="flex items-center justify-between my-8">
+      <label for={src} className="flex select-none cursor-pointer">
         <img
           src={src}
           alt=""
