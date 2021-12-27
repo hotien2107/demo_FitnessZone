@@ -34,7 +34,7 @@ const ListFriends = () => {
             friendId='1'
           />
           <ListFriendsItem
-            src={pic2}
+            src={pic3}
             name='Roronoa Zoro'
             lastMess='Thuyền chúng ta ở đâu'
             lastTime='T2'
@@ -42,7 +42,7 @@ const ListFriends = () => {
             friendId='2'
           />
           <ListFriendsItem
-            src={pic3}
+            src={pic2}
             name='Usopp'
             lastMess='Ngay kia'
             lastTime='T2'

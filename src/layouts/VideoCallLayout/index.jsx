@@ -1,4 +1,3 @@
-import { useLayoutEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import { VideoNavBar } from "../VideoNavBar";
 
