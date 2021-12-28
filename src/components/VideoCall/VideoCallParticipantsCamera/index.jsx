@@ -33,17 +33,7 @@ export const VideoCallParticipantsCamera = ({
   const renderGroupCall = () => {
     return (
       <div className={`${clazz} ${className}`} {...rest}>
-        <BsFillCaretLeftFill
-          className="p-2 bg-white rounded-full cursor-pointer"
-          size={30}
-        />
-
         {React.Children.map(children, (child) => React.cloneElement(child))}
-
-        <BsFillCaretRightFill
-          className="p-2 bg-white rounded-full cursor-pointer"
-          size={30}
-        />
       </div>
     );
   };

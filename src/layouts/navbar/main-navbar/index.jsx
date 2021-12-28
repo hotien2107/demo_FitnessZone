@@ -12,9 +12,9 @@ const MainNavbar = () => {
   return (
     <Navbar>
       <div className="flex items-center justify-between w-full h-full px-12">
+        <HomeIcon isActive={curr === ""} />
         <DumbbellIcon isActive={curr === "exercises"} />
         <UtensilsIcon isActive={curr === "diets"} />
-        <HomeIcon isActive={curr === ""} />
         <FriendIcon isActive={curr === "list-friends"} />
         <UserIcon isActive={curr === "user"} />
       </div>
