@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaMicrophone, FaMicrophoneSlash, FaVideo, FaVideoSlash, FaChromecast, FaList, FaTimes, FaPlus } from 'react-icons/fa';
+import { FaMicrophone, FaMicrophoneSlash, FaVideo, FaVideoSlash, FaChromecast, FaList, FaPhoneSlash, FaPlus } from 'react-icons/fa';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import Navbar from '../navbar';
 import { Toggle, ToggleOff, ToggleOn } from './components/Toggle';
@@ -121,7 +121,7 @@ export const VideoNavBar = ({ withTrainer }) => {
         )}
 
         <VideoNavBarIcon type='red' className='rounded-full' onClick={handleExitClick}>
-          <FaTimes />
+          <FaPhoneSlash />
         </VideoNavBarIcon>
       </div>
     </Navbar>

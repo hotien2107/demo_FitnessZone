@@ -13,7 +13,7 @@ const Exercises = () => {
         <>
             <CommonHeader className="flex items-center">
                 <FaSearch className='text-5xl text-white mr-8' />
-                <InputText placeholder='Tìm kiếm bạn bè' isWhite/>
+                <InputText placeholder='Tìm kiếm bài tập' isWhite/>
             </CommonHeader>
             <Main>
                 <section className="mt-8">

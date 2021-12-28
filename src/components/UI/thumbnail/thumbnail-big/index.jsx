@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaUserGraduate } from 'react-icons/fa';
-
-const defaultSrc =
-  'https://us.123rf.com/450wm/lioputra/lioputra2010/lioputra201000171/157886721-man-character-doing-push-ups-flat-vector-illustration-isolated-on-different-layers.jpg?ver=6';
+import menu2 from '../../../../assets/images/menu2.webp'
 
 const ThumbnailBig = ({ src, hasTrainer }) => {
   return (
@@ -14,7 +12,7 @@ const ThumbnailBig = ({ src, hasTrainer }) => {
       ) : null}
       {/* image */}
       <div className='w-72 h-72 bg-white rounded-2xl overflow-hidden mb-2'>
-        <img src={src ? src : defaultSrc} alt='#' />
+        <img src={src ? src : menu2} alt='#' />
       </div>
       <div className="">
           <p className='text-3xl font-semibold text-gray-800'>Hít đất giảm cân</p>

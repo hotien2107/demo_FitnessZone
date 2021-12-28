@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const colors = {
   green: { bg: "bg-green-500", fg: "text-white" },

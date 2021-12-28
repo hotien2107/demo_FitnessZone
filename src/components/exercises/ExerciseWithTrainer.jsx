@@ -1,5 +1,4 @@
 import { VideoNavBar } from '../../layouts/VideoNavBar';
-import { Outlet } from 'react-router-dom';
 import { VideoCallParticipantsCamera, VideoCallSmallCamera } from '../VideoCall/VideoCallParticipantsCamera';
 import { VideoCallExerciseProgress } from '../VideoCall/VideoCallExerciseProgress';
 import { fakeExercises } from '../../dummy-data/workouts';
