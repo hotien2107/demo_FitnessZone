@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Main = ({ children }) => {
-  return <main className='px-12'>{children}</main>;
+  return <main className="px-12">{children}</main>;
 };
 
 export default Main;
